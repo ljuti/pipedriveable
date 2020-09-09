@@ -11,7 +11,7 @@ module Pipedriveable
       ]
 
       def deserialize(data)
-        Pipedriveable::Objects::Person.new(data: data)
+        Pipedriveable::Objects::Person.new(payload: data)
       end
     end
   end

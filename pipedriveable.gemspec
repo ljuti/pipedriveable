@@ -15,12 +15,18 @@ Gem::Specification.new do |gem|
 
   gem.license     = "MIT"
 
+  gem.add_dependency "activesupport", "~> 6.0"
+  gem.add_dependency "faraday"
+  gem.add_dependency "faraday_middleware"
+  gem.add_dependency "dry-initializer"
   gem.add_dependency "dry-types"
   gem.add_dependency "dry-struct"
   gem.add_dependency "dry-validation"
   gem.add_dependency "dry-monads"
+  gem.add_dependency "hashie", "~> 4.0"
 
   gem.add_development_dependency "rspec", ">= 3.9"
+  gem.add_development_dependency "rspec-rails"
   gem.add_development_dependency "rspec-collection_matchers"
   gem.add_development_dependency "fuubar", "~> 2.5"
   gem.add_development_dependency "rspec-instafail", "~> 1.0"
@@ -30,4 +36,6 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency "pry-byebug", "~> 3.6"
   gem.add_development_dependency "rake", "~> 13.0"
   gem.add_development_dependency "factory_bot"
+
+  gem.add_development_dependency "webmock"
 end

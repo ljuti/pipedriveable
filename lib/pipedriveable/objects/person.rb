@@ -11,7 +11,7 @@ module Pipedriveable
       extend Forwardable
       extend Dry::Initializer
 
-      option :data, default: proc { Hashie::Mash.new }
+      option :payload, default: proc { Hashie::Mash.new() }
 
       def_delegators :@data,
         :id,
@@ -19,32 +19,73 @@ module Pipedriveable
         :first_name,
         :last_name
 
-      attr_reader :phone, :email
+      def_delegators :@related,
+        :organization,
+        :user
+
+      attr_reader :phone, :email, :related
         
-      def initialize(**data)
+      def initialize(**payload)
         super
-        process_phone_numbers(@data.phone) if @data.respond_to?(:phone)
-        process_emails(@data.email) if @data.respond_to?(:email)
-      end
-
-      def process_phone_numbers(numbers)
-        @phone = numbers.map do |number|
-          PhoneNumber.new(
-            number: number.value,
-            primary: number.primary
-          )
+        if payload.has_key?(:payload)
+          extract_payload(payload)
+          process_phone_numbers
+          process_emails
+          resolve_related_objects
+        else
+          initialize_new_object
         end
       end
 
-      def process_emails(emails)
-        @email = emails.map do |email|
-          EmailAddress.new(
-            email: email.value,
-            primary: email.primary
-          )
+      def initialize_new_object
+        @data = Hashie::Mash.new
+      end
+
+      def extract_payload(payload)
+        @data = payload[:payload].data
+        @related_objects = payload[:payload].related_objects
+      end
+
+      def process_phone_numbers
+        if @data.respond_to?(:phone)
+          @phone = @data.phone.map do |number|
+            PhoneNumber.new(
+              number: number.value,
+              primary: number.primary
+            )
+          end
         end
       end
 
+      def process_emails
+        if @data.respond_to?(:email)
+          @email = @data.email.map do |email|
+            EmailAddress.new(
+              email: email.value,
+              primary: email.primary
+            )
+          end
+        end
+      end
+
+      def resolve_related_objects
+        @related = Hashie::Mash.new
+        @related_objects.each do |key, value|
+          klass = resolve_klass(key)
+          @related.__send__(:"#{key}=", klass.new(payload: value, payload_type: :related))
+          @related.__send__(:"#{key}_data=", value)
+        end
+      end
+      
+      def resolve_klass(klass)
+        case klass
+        when "organization"
+          Pipedriveable::Objects::Organization
+        when "user"
+          Pipedriveable::Objects::User
+        end
+      end
+      
       class PhoneNumber < Dry::Struct
         attribute :number, Types::String
         attribute :primary, Types::Bool

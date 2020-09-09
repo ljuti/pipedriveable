@@ -6,6 +6,7 @@ require "rspec_junit_formatter"
 require "rspec/support/spec/shell_out"
 require "rspec/collection_matchers"
 
+require "webmock/rspec"
 require "factory_bot"
 
 require "pipedriveable"

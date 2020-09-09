@@ -1,0 +1,263 @@
+{
+  "success": true,
+  "data": {
+    "id": 1,
+    "creator_user_id": {
+      "id": 123456789,
+      "name": "Lauri Jutila",
+      "email": "lauri.jutila@getsales.fi",
+      "has_pic": 1,
+      "pic_hash": "644d214f0210f242378e866cd04f9b7f",
+      "active_flag": true,
+      "value": 123456789
+    },
+    "user_id": {
+      "id": 123456789,
+      "name": "Lauri Jutila",
+      "email": "lauri.jutila@getsales.fi",
+      "has_pic": 1,
+      "pic_hash": "644d214f0210f242378e866cd04f9b7f",
+      "active_flag": true,
+      "value": 123456789
+    },
+    "person_id": {
+      "active_flag": true,
+      "name": "Johnny Doe",
+      "email": [
+        {
+          "label": "work",
+          "value": "johnny.doe@doecorp.com",
+          "primary": true
+        }
+      ],
+      "phone": [
+        {
+          "label": "work",
+          "value": "+358501234567",
+          "primary": true
+        }
+      ],
+      "value": 1
+    },
+    "org_id": {
+      "name": "Doe Corporation Oy",
+      "people_count": 2,
+      "owner_id": 123456789,
+      "address": "Doe Street, Helsinki, Finland",
+      "active_flag": true,
+      "cc_email": "pipedriveable@pipedriveablemail.com",
+      "value": 1
+    },
+    "stage_id": 1,
+    "title": "Doe Corporation Sales Boost 2020",
+    "value": 5000,
+    "currency": "EUR",
+    "add_time": "2020-02-05 06:06:27",
+    "update_time": "2020-08-10 13:09:16",
+    "stage_change_time": "2020-08-09 11:35:48",
+    "active": true,
+    "deleted": false,
+    "status": "open",
+    "probability": 80,
+    "next_activity_date": "2020-04-15",
+    "next_activity_time": null,
+    "next_activity_id": 121,
+    "last_activity_id": null,
+    "last_activity_date": null,
+    "lost_reason": null,
+    "visible_to": "3",
+    "close_time": null,
+    "pipeline_id": 1,
+    "won_time": null,
+    "first_won_time": null,
+    "lost_time": null,
+    "products_count": 2,
+    "files_count": 0,
+    "notes_count": 0,
+    "followers_count": 1,
+    "email_messages_count": 0,
+    "activities_count": 1,
+    "done_activities_count": 0,
+    "undone_activities_count": 1,
+    "participants_count": 2,
+    "expected_close_date": "2020-05-08",
+    "last_incoming_mail_time": null,
+    "last_outgoing_mail_time": null,
+    "label": null,
+    "stage_order_nr": 0,
+    "person_name": "Johnny Doe",
+    "org_name": "Doe Corporation Oy",
+    "next_activity_subject": "Myyntikeskustelu",
+    "next_activity_type": "call",
+    "next_activity_duration": null,
+    "next_activity_note": null,
+    "formatted_value": "€5,000",
+    "weighted_value": 4000,
+    "formatted_weighted_value": "€4,000",
+    "weighted_value_currency": "EUR",
+    "rotten_time": null,
+    "owner_name": "Lauri Jutila",
+    "cc_email": "pipedriveable+deal1@pipedriveablemail.com",
+    "org_hidden": false,
+    "person_hidden": false,
+    "average_time_to_won": {
+      "y": 0,
+      "m": 0,
+      "d": 0,
+      "h": 0,
+      "i": 0,
+      "s": 0,
+      "total_seconds": 0
+    },
+    "average_stage_progress": 0,
+    "age": {
+      "y": 0,
+      "m": 7,
+      "d": 4,
+      "h": 7,
+      "i": 37,
+      "s": 35,
+      "total_seconds": 18776255
+    },
+    "stay_in_pipeline_stages": {
+      "times_in_stages": {
+        "1": 18728137,
+        "2": 57,
+        "3": 47928,
+        "8": 0,
+        "9": 0,
+        "10": 37,
+        "13": 0,
+        "14": 0,
+        "15": 96
+      },
+      "order_of_stages": [
+        1,
+        2,
+        3,
+        8,
+        9,
+        10,
+        13,
+        14,
+        15
+      ]
+    },
+    "last_activity": null,
+    "next_activity": {
+      "id": 121,
+      "company_id": 7430896,
+      "user_id": 123456789,
+      "done": false,
+      "type": "call",
+      "reference_type": null,
+      "reference_id": null,
+      "conference_meeting_client": null,
+      "conference_meeting_url": null,
+      "due_date": "2020-04-15",
+      "due_time": "",
+      "duration": "",
+      "busy_flag": null,
+      "add_time": "2020-02-04 14:09:18",
+      "marked_as_done_time": "",
+      "last_notification_time": null,
+      "last_notification_user_id": null,
+      "notification_language_id": 1,
+      "subject": "Myyntikeskustelu",
+      "public_description": "",
+      "calendar_sync_include_context": null,
+      "location": null,
+      "org_id": 1,
+      "person_id": 1,
+      "deal_id": 1,
+      "lead_id": null,
+      "lead_title": "",
+      "active_flag": true,
+      "update_time": "2020-02-05 07:56:27",
+      "update_user_id": 123456789,
+      "gcal_event_id": null,
+      "google_calendar_id": null,
+      "google_calendar_etag": null,
+      "source_timezone": null,
+      "rec_rule": null,
+      "rec_rule_extension": null,
+      "rec_master_activity_id": null,
+      "conference_meeting_id": null,
+      "note": null,
+      "created_by_user_id": 123456789,
+      "location_subpremise": null,
+      "location_street_number": null,
+      "location_route": null,
+      "location_sublocality": null,
+      "location_locality": null,
+      "location_admin_area_level_1": null,
+      "location_admin_area_level_2": null,
+      "location_country": null,
+      "location_postal_code": null,
+      "location_formatted_address": null,
+      "attendees": null,
+      "participants": [
+        {
+          "person_id": 1,
+          "primary_flag": true
+        }
+      ],
+      "series": null,
+      "org_name": "Doe Corporation Oy",
+      "person_name": "Johnny Doe",
+      "deal_title": "Doe Corporation Sales Boost 2020",
+      "owner_name": "Lauri Jutila",
+      "person_dropbox_bcc": "pipedriveable@pipedriveablemail.com",
+      "deal_dropbox_bcc": "pipedriveable+deal1@pipedriveablemail.com",
+      "assigned_to_user_id": 123456789,
+      "file": null
+    }
+  },
+  "additional_data": {
+    "dropbox_email": "pipedriveable+deal1@pipedriveablemail.com"
+  },
+  "related_objects": {
+    "user": {
+      "123456789": {
+        "id": 123456789,
+        "name": "Lauri Jutila",
+        "email": "lauri.jutila@getsales.fi",
+        "has_pic": 1,
+        "pic_hash": "644d214f0210f242378e866cd04f9b7f",
+        "active_flag": true
+      }
+    },
+    "organization": {
+      "1": {
+        "id": 1,
+        "name": "Doe Corporation Oy",
+        "people_count": 2,
+        "owner_id": 123456789,
+        "address": "Doe Street, Helsinki, Finland",
+        "active_flag": true,
+        "cc_email": "pipedriveable@pipedriveablemail.com"
+      }
+    },
+    "person": {
+      "1": {
+        "active_flag": true,
+        "id": 1,
+        "name": "Johnny Doe",
+        "email": [
+          {
+            "label": "work",
+            "value": "johnny.doe@doecorp.com",
+            "primary": true
+          }
+        ],
+        "phone": [
+          {
+            "label": "work",
+            "value": "+358501234567",
+            "primary": true
+          }
+        ]
+      }
+    }
+  }
+}

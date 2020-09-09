@@ -8,7 +8,7 @@ module Pipedriveable
       def find(id)
         response = @client.connection.call(action: :find, entity: :person, id: id)
         if response.success?
-          builder.deserialize(response.data)
+          builder.deserialize(response)
         end
       end
 
