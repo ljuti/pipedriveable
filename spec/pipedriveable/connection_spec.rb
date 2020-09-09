@@ -47,7 +47,6 @@ RSpec.describe Pipedriveable::Connection do
       connection = subject.connection
       expect(connection.url_prefix).to be_a URI
       expect(connection.url_prefix.to_s).to match /api.pipedrive.com/
-      pp connection
     end
   end
 end

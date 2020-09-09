@@ -1,6 +1,10 @@
 # pipedriveable
 
-A Ruby gem for interfacing with Pipedrive CRM API.
+A Ruby gem for interfacing with [Pipedrive CRM](https://www.pipedrive.com) API.
+
+This gem aims to be compatible with [Pipedrive API v1](https://developers.pipedrive.com/docs/api/v1/).
+
+This gem is in no way affiliated with Pipedrive CRM.
 
 ## Sponsors
 
